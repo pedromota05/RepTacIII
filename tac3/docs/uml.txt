@@ -1,0 +1,25 @@
+UMLet
+Draw.io
+PlantUML (puml)
+Mermaid (mmd)
+
+pyreverse (pylint)
+pip install pylint
+
+Graphviz
+sudo apt install graphviz
+winget install Graphviz.Graphviz
+>dot -h
+
+digraph G {
+    A -> B;
+    B -> C;
+    C -> A;
+}
+dot -Tpng docs/grafo.dot -o docs/grafo.png
+(Inkscape - vetorial)
+dot -Tsvg docs/grafo.dot -o docs/grafo.svg
+
+pyreverse -o svg source/modules -S -k -p game -d docs
+pyreverse -o png source/modules -S -k -p game -d docs
+(PNG ou SVG ou puml ou mmd ou dot)

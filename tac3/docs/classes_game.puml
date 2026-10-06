@@ -1,0 +1,19 @@
+@startuml classes_game
+set namespaceSeparator none
+class "Display" as modules.display.Display {
+}
+class "Font" as pygame.ftfont.Font {
+}
+class "Game" as modules.game.Game {
+}
+class "GameEngine" as modules.engine.GameEngine {
+}
+class "Level1" as modules.ui.level1.Level1 {
+}
+class "Panel" as modules.ui.panel.Panel {
+}
+class "Player" as modules.entities.player.Player {
+}
+modules.entities.player.Player --* modules.game.Game : player
+pygame.ftfont.Font --* modules.ui.panel.Panel : font
+@enduml

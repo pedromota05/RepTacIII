@@ -1,0 +1,29 @@
+digraph "packages_game" {
+rankdir=BT
+charset="utf-8"
+"modules" [color="black", label=<modules>, shape="box", style="solid"];
+"modules.config" [color="black", label=<modules.config>, shape="box", style="solid"];
+"modules.config.settings" [color="black", label=<modules.config.settings>, shape="box", style="solid"];
+"modules.config.theme" [color="black", label=<modules.config.theme>, shape="box", style="solid"];
+"modules.constants" [color="black", label=<modules.constants>, shape="box", style="solid"];
+"modules.display" [color="black", label=<modules.display>, shape="box", style="solid"];
+"modules.editor" [color="black", label=<modules.editor>, shape="box", style="solid"];
+"modules.engine" [color="black", label=<modules.engine>, shape="box", style="solid"];
+"modules.entities" [color="black", label=<modules.entities>, shape="box", style="solid"];
+"modules.entities.player" [color="black", label=<modules.entities.player>, shape="box", style="solid"];
+"modules.events" [color="black", label=<modules.events>, shape="box", style="solid"];
+"modules.events.actions" [color="black", label=<modules.events.actions>, shape="box", style="solid"];
+"modules.events.io" [color="black", label=<modules.events.io>, shape="box", style="solid"];
+"modules.game" [color="black", label=<modules.game>, shape="box", style="solid"];
+"modules.ui" [color="black", label=<modules.ui>, shape="box", style="solid"];
+"modules.ui.level1" [color="black", label=<modules.ui.level1>, shape="box", style="solid"];
+"modules.ui.panel" [color="black", label=<modules.ui.panel>, shape="box", style="solid"];
+"modules.display" -> "modules.constants" [arrowhead="open", arrowtail="none"];
+"modules.engine" -> "modules.display" [arrowhead="open", arrowtail="none"];
+"modules.engine" -> "modules.events.actions" [arrowhead="open", arrowtail="none"];
+"modules.engine" -> "modules.events.io" [arrowhead="open", arrowtail="none"];
+"modules.engine" -> "modules.game" [arrowhead="open", arrowtail="none"];
+"modules.engine" -> "modules.ui.level1" [arrowhead="open", arrowtail="none"];
+"modules.engine" -> "modules.ui.panel" [arrowhead="open", arrowtail="none"];
+"modules.game" -> "modules.entities.player" [arrowhead="open", arrowtail="none"];
+}

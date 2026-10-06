@@ -1,0 +1,43 @@
+classDiagram
+  class modules {
+  }
+  class config {
+  }
+  class settings {
+  }
+  class theme {
+  }
+  class constants {
+  }
+  class display {
+  }
+  class editor {
+  }
+  class engine {
+  }
+  class entities {
+  }
+  class player {
+  }
+  class events {
+  }
+  class actions {
+  }
+  class io {
+  }
+  class game {
+  }
+  class ui {
+  }
+  class level1 {
+  }
+  class panel {
+  }
+  display --> constants
+  engine --> display
+  engine --> actions
+  engine --> io
+  engine --> game
+  engine --> level1
+  engine --> panel
+  game --> player

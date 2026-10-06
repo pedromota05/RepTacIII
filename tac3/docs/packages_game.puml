@@ -1,0 +1,45 @@
+@startuml packages_game
+set namespaceSeparator none
+package "modules" as modules {
+}
+package "modules.config" as modules.config {
+}
+package "modules.config.settings" as modules.config.settings {
+}
+package "modules.config.theme" as modules.config.theme {
+}
+package "modules.constants" as modules.constants {
+}
+package "modules.display" as modules.display {
+}
+package "modules.editor" as modules.editor {
+}
+package "modules.engine" as modules.engine {
+}
+package "modules.entities" as modules.entities {
+}
+package "modules.entities.player" as modules.entities.player {
+}
+package "modules.events" as modules.events {
+}
+package "modules.events.actions" as modules.events.actions {
+}
+package "modules.events.io" as modules.events.io {
+}
+package "modules.game" as modules.game {
+}
+package "modules.ui" as modules.ui {
+}
+package "modules.ui.level1" as modules.ui.level1 {
+}
+package "modules.ui.panel" as modules.ui.panel {
+}
+modules.display --> modules.constants
+modules.engine --> modules.display
+modules.engine --> modules.events.actions
+modules.engine --> modules.events.io
+modules.engine --> modules.game
+modules.engine --> modules.ui.level1
+modules.engine --> modules.ui.panel
+modules.game --> modules.entities.player
+@enduml

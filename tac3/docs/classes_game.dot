@@ -1,0 +1,13 @@
+digraph "classes_game" {
+rankdir=BT
+charset="utf-8"
+"modules.display.Display" [color="black", fontcolor="black", label=<Display>, shape="record", style="solid"];
+"pygame.ftfont.Font" [color="black", fontcolor="black", label=<Font>, shape="record", style="solid"];
+"modules.game.Game" [color="black", fontcolor="black", label=<Game>, shape="record", style="solid"];
+"modules.engine.GameEngine" [color="black", fontcolor="black", label=<GameEngine>, shape="record", style="solid"];
+"modules.ui.level1.Level1" [color="black", fontcolor="black", label=<Level1>, shape="record", style="solid"];
+"modules.ui.panel.Panel" [color="black", fontcolor="black", label=<Panel>, shape="record", style="solid"];
+"modules.entities.player.Player" [color="black", fontcolor="black", label=<Player>, shape="record", style="solid"];
+"modules.entities.player.Player" -> "modules.game.Game" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="player", style="solid"];
+"pygame.ftfont.Font" -> "modules.ui.panel.Panel" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="font", style="solid"];
+}
